@@ -263,8 +263,8 @@ section p, section ul {
 
 /* Stil för texten */
 .text-about-me {
-  font-family: 'Gloria Hallelujah', serif;
-  font-size: 1.5em; /* Textstorlek */
+  font-family: 'Caveat';
+  font-size: 1.8em; /* Textstorlek */
   color: #333; /* Textfärg */
   line-height: 1.5;
   letter-spacing: 0.5px;
