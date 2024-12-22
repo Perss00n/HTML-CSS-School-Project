@@ -1,296 +1,337 @@
 /* Grundläggande styling */
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
 }
 
 /* Header-styling */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-    text-shadow: 1px 1px 1px #957dad,
-             1px 2px 1px #957dad,
-             1px 3px 1px #957dad,
-             1px 4px 1px #957dad,
-             1px 5px 1px #957dad,
-             1px 6px 1px #957dad,
-             1px 10px 5px rgba(16, 16, 16, 0.5),
-             1px 15px 10px rgba(16, 16, 16, 0.4),
-             1px 20px 30px rgba(16, 16, 16, 0.3),
-             1px 25px 50px rgba(16, 16, 16, 0.2);
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  text-shadow: 1px 1px 1px #957dad,
+           1px 2px 1px #957dad,
+           1px 3px 1px #957dad,
+           1px 4px 1px #957dad,
+           1px 5px 1px #957dad,
+           1px 6px 1px #957dad,
+           1px 10px 5px rgba(16, 16, 16, 0.5),
+           1px 15px 10px rgba(16, 16, 16, 0.4),
+           1px 20px 30px rgba(16, 16, 16, 0.3),
+           1px 25px 50px rgba(16, 16, 16, 0.2);
 }
 
 header h1 {
-    margin: 0;
-    font-family: 'Luckiest Guy', serif;
-    font-weight: 400;
-    font-style: normal;
+  margin: 0;
+  font-family: 'Luckiest Guy', serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Navbar-styling med hoover effekt */
 nav {
-    background: #444;
-    padding: 0.5rem 0;
-    display: grid;
-    place-content: center;
+  background: #444;
+  padding: 0.5rem 0;
+  display: grid;
+  place-content: center;
 }
 
 .navbar {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    font: bold 1.5rem sans-serif;
-    text-transform: uppercase;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font: bold 1.5rem sans-serif;
+  text-transform: uppercase;
 }
 
 .navbar li {
-    padding: 0 0.5em 0.25em;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+  padding: 0 0.5em 0.25em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .navbar a {
-    color: grey;
-    text-decoration: none;
-    transition: 0.3s;
+  color: grey;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .navbar li:hover a {
-    color: #fff;
+  color: #fff;
 }
 
 .navbar li:before {
-    content: "";
-    position: absolute;
-    inset: calc(100% - 3px) 0 0 0;
-    background: #ce4f20;
-    scale: 0 1;
-    transition: 0.3s, translate 0s 0.3s;
+  content: "";
+  position: absolute;
+  inset: calc(100% - 3px) 0 0 0;
+  background: #ce4f20;
+  scale: 0 1;
+  transition: 0.3s, translate 0s 0.3s;
 }
 
 .navbar:hover li:before {
-    scale: 1;
+  scale: 1;
 }
 
 .navbar li:hover:before {
-    translate: 0;
-    transition: 0.3s;
+  translate: 0;
+  transition: 0.3s;
 }
 
 .navbar:hover li:has(~ li:hover):before {
-    translate: 100% 0;
-    transition: 0.2s 0.2s, scale 0s 0.4s;
+  translate: 100% 0;
+  transition: 0.2s 0.2s, scale 0s 0.4s;
 }
 
 .navbar:hover li:hover ~ li:before {
-    translate: -100% 0;
-    transition: 0.2s 0.2s, scale 0s 0.4s;
+  translate: -100% 0;
+  transition: 0.2s 0.2s, scale 0s 0.4s;
 }
 
 /* Main-styling */
 main {
-  flex-grow: 1; /* Gör att main-boxen växer och tar upp utrymmet */
-  margin: 20px auto;
-  padding: 1rem;
-  width: 800px; /* Sätt en fast bredd */
-  height: 600px; /* Sätt en fast höjd (om du vill ha en specifik höjd) */
-  background: #f4f4f4;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; /* Om innehållet är större än höjden, lägg till en vertikal scrollbar */
+flex-grow: 1; /* Gör att main-boxen växer och tar upp utrymmet */
+margin: 20px auto;
+padding: 1rem;
+width: 800px; /* Sätt en fast bredd */
+height: 600px; /* Sätt en fast höjd (om du vill ha en specifik höjd) */
+background: #f4f4f4;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+overflow-y: auto; /* Om innehållet är större än höjden, lägg till en vertikal scrollbar */
 }
 
 /* Sektioner */
 section h2 {
-    border-bottom: 2px solid #333;
-    margin-bottom: 1px;
-    padding-bottom: 3px;
-    color: #333;
+  border-bottom: 2px solid #333;
+  margin-bottom: 1px;
+  padding-bottom: 3px;
+  color: #333;
 }
 
 section p, section ul {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 /* Lista styling för att få det att se ut som ett anteckningsblock */
 .hobbieslist {
-    font-family: 'Gloria Hallelujah', cursive;
-	font-size: 1.4rem;
-	background: f4f4f4;
-	margin: 0;
-	padding: 1rem;
-	display: grid;
-	place-items: left;
+  font-family: 'Gloria Hallelujah', cursive;
+font-size: 1.4rem;
+background: f4f4f4;
+margin: 0;
+padding: 1rem;
+display: grid;
+place-items: left;
 }
 
 .hobbieslist ul {
-	list-style-position: inside;
-	width: 600px;
-	max-width: 100%;
-	background: white;
-	box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
-	padding: 0;
-	margin: 0;
-	border-radius: 0.1rem;
+list-style-position: inside;
+width: 600px;
+max-width: 100%;
+background: white;
+box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
+padding: 0;
+margin: 0;
+border-radius: 0.1rem;
 }
 
 .hobbieslist li {
-  transform: translateX(-100%);  /* Flytta listobjekten till vänster utanför skärmen */
-  opacity: 0;  /* Gör listobjekten osynliga från början */
-  animation: slideIn 0.5s forwards;  /* Använd animationen */
-  animation-delay: calc(0.1s * var(--i));  /* Fördröj animationen för varje listobjekt */
+transform: translateX(-100%);  /* Flytta listobjekten till vänster utanför skärmen */
+opacity: 0;  /* Gör listobjekten osynliga från början */
+animation: slideIn 0.5s forwards;  /* Använd animationen */
+animation-delay: calc(0.1s * var(--i));  /* Fördröj animationen för varje listobjekt */
 }
 
 @keyframes slideIn {
-  0% {
-      transform: translateX(-100%); /* Börjar från vänster utanför skärmen */
-      opacity: 0;  /* Osynlig */
-  }
-  100% {
-      transform: translateX(0);  /* Sluta på sin ursprungliga position */
-      opacity: 1;  /* Gör listobjekten synliga */
-  }
+0% {
+    transform: translateX(-100%); /* Börjar från vänster utanför skärmen */
+    opacity: 0;  /* Osynlig */
+}
+100% {
+    transform: translateX(0);  /* Sluta på sin ursprungliga position */
+    opacity: 1;  /* Gör listobjekten synliga */
+}
 }
 
 .hobbieslist li:not(:last-child) {
-	border-bottom: 1px solid lightblue;
+border-bottom: 1px solid lightblue;
 }
 
 .hobbieslist li:first-child {
-	margin-top: 1rem;
+margin-top: 1rem;
 }
 
 .hobbieslist li:last-child {
-	margin-bottom: 1rem;
+margin-bottom: 1rem;
 }
 
 ::marker {
-	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='14' viewBox='0 0 50 50'%3E%3Cpath d='M46.4 16.2c-2.3-2.3-5.4-3.5-8.4-4.5-.5-.2-1.1-.3-1.6-.5-1.6-1.6-3.7-2.8-6.2-3.2-1-.2-1.9.1-2.5.6-.9-.3-1.8-.6-2.7-.8-3.2-1-6.4-1.8-9.5-.1-1 .5-1.9 1.2-2.7 2-6.4 1.4-11.7 5-12.4 12.7C0 27 1.9 31.5 4.9 34.9c.1.6.2 1.1.4 1.7 1 3.2 3.3 5.7 6.7 6.5 2.7.6 5.4-.2 7.9-1.2 3.3.4 6.7.3 9.9 0 6.5-.7 13.3-2.8 17.1-8.5 3.6-5.2 4-12.6-.5-17.2zm-17.3.9c2.1.4 4 1.7 4.7 3.8 0 .5-.1 1.1-.2 1.6-.3 1.4-.8 2.6-1.6 3.7-.7.2-1.5.1-2.3-.4-.8-.4-1.6-1-2.2-1.6-.4-.4-1.2-1.7-1.6-1.9 3.4 1.3 5.1-3 3.2-5.2zm-11.6 9.7c.2-1.9 1.1-3.9 2.3-5.5-.4 2.1.3 4.2 1.7 6 1.3 1.7 3.1 3.2 5 4.2-.2.1-.4.2-.6.4-.1 0-.1.1-.2.1-3.9.2-8.7-.8-8.2-5.2zm-6.4 3.1c.1.3.1.7.2 1 .2.6.4 1.2.7 1.8-.4-.2-.7-.5-1-.7.1-.8.1-1.4.1-2.1zm31.2-1.3c-.9 1.7-2.1 3.1-3.7 4.1 2-2.1 3.4-4.7 4-7.6.2-.7.3-1.4.3-2.1.6 1.5.5 3.3-.6 5.6z'/%3E%3C/svg%3E") ' ';
+content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='14' viewBox='0 0 50 50'%3E%3Cpath d='M46.4 16.2c-2.3-2.3-5.4-3.5-8.4-4.5-.5-.2-1.1-.3-1.6-.5-1.6-1.6-3.7-2.8-6.2-3.2-1-.2-1.9.1-2.5.6-.9-.3-1.8-.6-2.7-.8-3.2-1-6.4-1.8-9.5-.1-1 .5-1.9 1.2-2.7 2-6.4 1.4-11.7 5-12.4 12.7C0 27 1.9 31.5 4.9 34.9c.1.6.2 1.1.4 1.7 1 3.2 3.3 5.7 6.7 6.5 2.7.6 5.4-.2 7.9-1.2 3.3.4 6.7.3 9.9 0 6.5-.7 13.3-2.8 17.1-8.5 3.6-5.2 4-12.6-.5-17.2zm-17.3.9c2.1.4 4 1.7 4.7 3.8 0 .5-.1 1.1-.2 1.6-.3 1.4-.8 2.6-1.6 3.7-.7.2-1.5.1-2.3-.4-.8-.4-1.6-1-2.2-1.6-.4-.4-1.2-1.7-1.6-1.9 3.4 1.3 5.1-3 3.2-5.2zm-11.6 9.7c.2-1.9 1.1-3.9 2.3-5.5-.4 2.1.3 4.2 1.7 6 1.3 1.7 3.1 3.2 5 4.2-.2.1-.4.2-.6.4-.1 0-.1.1-.2.1-3.9.2-8.7-.8-8.2-5.2zm-6.4 3.1c.1.3.1.7.2 1 .2.6.4 1.2.7 1.8-.4-.2-.7-.5-1-.7.1-.8.1-1.4.1-2.1zm31.2-1.3c-.9 1.7-2.1 3.1-3.7 4.1 2-2.1 3.4-4.7 4-7.6.2-.7.3-1.4.3-2.1.6 1.5.5 3.3-.6 5.6z'/%3E%3C/svg%3E") ' ';
 }
 
 .hobbieslist li:nth-child(3n)::marker {
-	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='14' viewBox='0 0 50 50'%3E%3Cpath d='M46.5 12.5c-.4-1.1-1.3-1.8-2.2-2-4.2-4-11.6-4.3-17.1-4.1-6.9.3-13.9 2.1-19.4 6.5C2 17.5-2.4 25.7 2.5 32.6c2.2 3.2 5.5 4.9 9 5.5 3.3 1.7 6.7 3.3 10.2 4.4 7.8 2.3 17 1.6 23.2-4.3 7.3-7 4.8-17.3 1.6-25.7zm-20.2 2.7c.6 0 1.3 0 1.8.2 1.1.4 1.7 1.3 2 2.3-1-1.2-2.4-2.1-3.8-2.5zm-1.4 6.6c.9.9 1.3 2.2-.2 2.3-2 .2-1.1-1.9.2-2.3zm-11.8 9.8c-.6-.3-2.9-1.1-3.2-1.8-.2-.5 1.4-3.1 2.1-4.2.3.5.7 1 1.2 1.4 0 .3.1.6.2.8.5 1.9 1.5 3.1 2.9 4h-.2c-.8.1-1.6.1-2.5-.1-.2 0-.3 0-.5-.1zM24 36.4c1.6-.7 3-1.5 4.3-2.5.8.2 1.7.3 2.5.5 2.5.4 5.2.9 7.7.6-.9.6-2 1.1-3 1.4-3.9 1.3-7.7 1-11.5 0z'/%3E%3C/svg%3E") ' ';
+content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='14' viewBox='0 0 50 50'%3E%3Cpath d='M46.5 12.5c-.4-1.1-1.3-1.8-2.2-2-4.2-4-11.6-4.3-17.1-4.1-6.9.3-13.9 2.1-19.4 6.5C2 17.5-2.4 25.7 2.5 32.6c2.2 3.2 5.5 4.9 9 5.5 3.3 1.7 6.7 3.3 10.2 4.4 7.8 2.3 17 1.6 23.2-4.3 7.3-7 4.8-17.3 1.6-25.7zm-20.2 2.7c.6 0 1.3 0 1.8.2 1.1.4 1.7 1.3 2 2.3-1-1.2-2.4-2.1-3.8-2.5zm-1.4 6.6c.9.9 1.3 2.2-.2 2.3-2 .2-1.1-1.9.2-2.3zm-11.8 9.8c-.6-.3-2.9-1.1-3.2-1.8-.2-.5 1.4-3.1 2.1-4.2.3.5.7 1 1.2 1.4 0 .3.1.6.2.8.5 1.9 1.5 3.1 2.9 4h-.2c-.8.1-1.6.1-2.5-.1-.2 0-.3 0-.5-.1zM24 36.4c1.6-.7 3-1.5 4.3-2.5.8.2 1.7.3 2.5.5 2.5.4 5.2.9 7.7.6-.9.6-2 1.1-3 1.4-3.9 1.3-7.7 1-11.5 0z'/%3E%3C/svg%3E") ' ';
 }
 
 .hobbieslist li:nth-child(3n - 1)::marker {
-	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='14' viewBox='0 0 50 50'%3E%3Cpath d='M48.3 23.7c-1-9.9-9.9-15.6-18.8-17.8-8.2-2.1-18.8-2.6-24.6 4.8C.6 16.2 1 23.6 4.3 29.3c-.5 1-.8 2-1 3-.6 4 2 7.6 5.1 10 5.9 4.4 14 4.2 19.6-.4 1.5 0 2.9-.2 4.4-.5 1.8 0 3.5 0 5.3-.1 2.3-.1 3.5-1.9 3.5-3.7 4.5-3.3 7.7-8.2 7.1-13.9zM9.1 17.8c1.1-4.1 4.9-5.8 8.8-6.1.9-.1 1.9-.1 2.9-.1-3.2 1.6-6.3 4.6-8 7.4-.1.1-.1.2-.2.3-1.1.9-2.1 1.9-3 2.9-.2.2-.4.4-.5.6-.4-1.7-.5-3.3 0-5z'/%3E%3C/svg%3E") ' ';
+content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='14' viewBox='0 0 50 50'%3E%3Cpath d='M48.3 23.7c-1-9.9-9.9-15.6-18.8-17.8-8.2-2.1-18.8-2.6-24.6 4.8C.6 16.2 1 23.6 4.3 29.3c-.5 1-.8 2-1 3-.6 4 2 7.6 5.1 10 5.9 4.4 14 4.2 19.6-.4 1.5 0 2.9-.2 4.4-.5 1.8 0 3.5 0 5.3-.1 2.3-.1 3.5-1.9 3.5-3.7 4.5-3.3 7.7-8.2 7.1-13.9zM9.1 17.8c1.1-4.1 4.9-5.8 8.8-6.1.9-.1 1.9-.1 2.9-.1-3.2 1.6-6.3 4.6-8 7.4-.1.1-.1.2-.2.3-1.1.9-2.1 1.9-3 2.9-.2.2-.4.4-.5.6-.4-1.7-.5-3.3 0-5z'/%3E%3C/svg%3E") ' ';
 }
 
 /* Footer-styling */
 .footer {
-    background-color: #333;
-    color: #ffffff;
-    text-align: center;
-    padding: 5px 0;
-    font-family: Arial, sans-serif;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  .footer-content a {
-    color: #61dafb;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Cool hover effect för länkar i footern */
-  .footer-content a:hover {
-    color: #ff5733;
-    transform: scale(1.1);
-  }
-  
-  /* Lägg till en understrykning utav texten när man hoovrar över den */
-  .footer-content a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #ff5733;
-    left: 50%;
-    bottom: -5px;
-    transition: width 0.3s ease, left 0.3s ease;
-  }
-  
-  .footer-content a:hover::after {
-    width: 100%;
-    left: 0;
-  }
-  
-  .footer-content p {
-    margin: 5px 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .footer-content p:hover {
-    opacity: 0.8;
-  }
+  background-color: #333;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 0;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content a {
+  color: #61dafb;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Cool hover effect för länkar i footern */
+.footer-content a:hover {
+  color: #ff5733;
+  transform: scale(1.1);
+}
+
+/* Lägg till en understrykning utav texten när man hoovrar över den */
+.footer-content a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ff5733;
+  left: 50%;
+  bottom: -5px;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.footer-content a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  transition: opacity 0.3s ease;
+}
+
+.footer-content p:hover {
+  opacity: 0.8;
+}
 
 /* Cool 3D-effekt för text */
 .threeD-text {
-  font-family: 'Luckiest Guy', serif;
-  font-size: 4rem;
-  font-weight: bold;
-  color: #fff; 
-  text-transform: uppercase;
-  position: relative;
-  letter-spacing: 2px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
-               1px 2px 2px rgba(0, 0, 0, 0.7),
-               1px 3px 3px rgba(0, 0, 0, 0.6),
-               1px 4px 4px rgba(0, 0, 0, 0.5),
-               1px 5px 5px rgba(0, 0, 0, 0.4),
-               1px 6px 6px rgba(0, 0, 0, 0.3),
-               1px 10px 10px rgba(0, 0, 0, 0.2), 
-               1px 15px 15px rgba(0, 0, 0, 0.1),
-               1px 20px 25px rgba(0, 0, 0, 0.05), 
-               1px 25px 40px rgba(0, 0, 0, 0.03);
+font-family: 'Luckiest Guy', serif;
+font-size: 4rem;
+font-weight: bold;
+color: #fff; 
+text-transform: uppercase;
+position: relative;
+letter-spacing: 2px;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+             1px 2px 2px rgba(0, 0, 0, 0.7),
+             1px 3px 3px rgba(0, 0, 0, 0.6),
+             1px 4px 4px rgba(0, 0, 0, 0.5),
+             1px 5px 5px rgba(0, 0, 0, 0.4),
+             1px 6px 6px rgba(0, 0, 0, 0.3),
+             1px 10px 10px rgba(0, 0, 0, 0.2), 
+             1px 15px 15px rgba(0, 0, 0, 0.1),
+             1px 20px 25px rgba(0, 0, 0, 0.05), 
+             1px 25px 40px rgba(0, 0, 0, 0.03);
 }
 
 /* Stil för texten */
 .text-about-me {
-  font-family: 'Caveat';
-  font-size: 1.8em; /* Textstorlek */
-  color: #333; /* Textfärg */
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-  white-space: pre-wrap; /* Gör så att texten kan brytas till ny rad */
-  word-wrap: break-word; /* Låter långa ord brytas till nästa rad */
-  overflow: hidden; /* Dölj text som inte syns än */
-  width: 100%; /* Full bredd på container */
-  height: auto;
+font-family: 'Caveat';
+font-size: 1.8em; /* Textstorlek */
+color: #333; /* Textfärg */
+line-height: 1.5;
+letter-spacing: 0.5px;
+white-space: pre-wrap; /* Gör så att texten kan brytas till ny rad */
+word-wrap: break-word; /* Låter långa ord brytas till nästa rad */
+overflow: hidden; /* Dölj text som inte syns än */
+width: 100%; /* Full bredd på container */
+height: auto;
 }
 
 
 /* Logo effekt för att få varje bokstav att snurra runt ett varv */
 .waviy {
-    position: relative;
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
   }
-  .waviy span {
-    position: relative;
-    display: inline-block;
-    font-size: 40px;
-    color: #fff;
-    text-transform: uppercase;
-    animation: flip 2s infinite;
-    animation-delay: calc(.2s * var(--i))
+}
+
+
+/* Justeringar för mindre skärmar */
+@media (max-width: 768px) {
+  main {
+      width: 95%;
+      margin: 10px auto;
+      padding: 0.5rem;
+      height: auto;
+      overflow-y: visible;
   }
-  @keyframes flip {
-    0%,80% {
-      transform: rotateY(360deg) 
-    }
+  
+      header h1 {
+      font-size: 2rem;
   }
+
+  .navbar {
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+      font-size: 1.2rem; 
+  }
+  
+      .threeD-text {
+      font-size: 2.5rem; 
+      text-align: center;
+  }
+  
+      .text-about-me {
+      font-size: 1.4em;
+      padding: 0 0.5rem;
+  }
+  
+      .hobbieslist {
+      font-size: 1.2rem;
+  }
+}
