@@ -143,7 +143,21 @@ section p, section ul {
 }
 
 .hobbieslist li {
-	padding: 0 0 0 1rem;
+  transform: translateX(-100%);  /* Flytta listobjekten till vänster utanför skärmen */
+  opacity: 0;  /* Gör listobjekten osynliga från början */
+  animation: slideIn 0.5s forwards;  /* Använd animationen */
+  animation-delay: calc(0.1s * var(--i));  /* Fördröj animationen för varje listobjekt */
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%); /* Börjar från vänster utanför skärmen */
+      opacity: 0;  /* Osynlig */
+  }
+  100% {
+      transform: translateX(0);  /* Sluta på sin ursprungliga position */
+      opacity: 1;  /* Gör listobjekten synliga */
+  }
 }
 
 .hobbieslist li:not(:last-child) {
