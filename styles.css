@@ -99,13 +99,15 @@ nav {
 
 /* Main-styling */
 main {
-    flex-grow: 1; /* Gör att main-boxen växer och tar upp utrymmet */
-    margin: 20px auto;
-    padding: 1rem;
-    max-width: 800px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-grow: 1; /* Gör att main-boxen växer och tar upp utrymmet */
+  margin: 20px auto;
+  padding: 1rem;
+  width: 800px; /* Sätt en fast bredd */
+  height: 600px; /* Sätt en fast höjd (om du vill ha en specifik höjd) */
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Om innehållet är större än höjden, lägg till en vertikal scrollbar */
 }
 
 /* Sektioner */
@@ -124,7 +126,7 @@ section p, section ul {
 .hobbieslist {
     font-family: 'Gloria Hallelujah', cursive;
 	font-size: 1.4rem;
-	background: #fff;
+	background: f4f4f4;
 	margin: 0;
 	padding: 1rem;
 	display: grid;
@@ -237,6 +239,27 @@ section p, section ul {
   .footer-content p:hover {
     opacity: 0.8;
   }
+
+/* Cool 3D-effekt för text */
+.threeD-text {
+  font-family: 'Luckiest Guy', serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff; 
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+               1px 2px 2px rgba(0, 0, 0, 0.7),
+               1px 3px 3px rgba(0, 0, 0, 0.6),
+               1px 4px 4px rgba(0, 0, 0, 0.5),
+               1px 5px 5px rgba(0, 0, 0, 0.4),
+               1px 6px 6px rgba(0, 0, 0, 0.3),
+               1px 10px 10px rgba(0, 0, 0, 0.2), 
+               1px 15px 15px rgba(0, 0, 0, 0.1),
+               1px 20px 25px rgba(0, 0, 0, 0.05), 
+               1px 25px 40px rgba(0, 0, 0, 0.03);
+}
 
 
 /* Logo effekt för att få varje bokstav att snurra runt ett varv */
