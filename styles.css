@@ -261,6 +261,20 @@ section p, section ul {
                1px 25px 40px rgba(0, 0, 0, 0.03);
 }
 
+/* Stil för texten */
+.text-about-me {
+  font-family: 'Gloria Hallelujah', serif;
+  font-size: 1.5em; /* Textstorlek */
+  color: #333; /* Textfärg */
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  white-space: pre-wrap; /* Gör så att texten kan brytas till ny rad */
+  word-wrap: break-word; /* Låter långa ord brytas till nästa rad */
+  overflow: hidden; /* Dölj text som inte syns än */
+  width: 100%; /* Full bredd på container */
+  height: auto;
+}
+
 
 /* Logo effekt för att få varje bokstav att snurra runt ett varv */
 .waviy {

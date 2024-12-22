@@ -34,7 +34,11 @@
 
     <main>
         <section>
-            <h2 class="threeD-text">Intressen</h2>
+            <h2 class="threeD-text">Om Mig</h2>            
+            <div class="text-about-me"></div>            
+        </section>
+
+        <section>
             <ul class="hobbieslist">
                 <li style="--i:1">Kodning och webbdesign</li>
                 <li style="--i:2">Bergsklättring</li>
@@ -57,6 +61,28 @@
         </div>
       </footer>
 
+/*Typewriter effekt*/
+      <script>
+        const textElement = document.querySelector('.text-about-me');
+        const text = "Jag är en blivande backendutvecklare med en djup passion för programmering och problemlösning. I 18 år arbetade jag " + 
+        "som golvläggare, men 2023 tog jag det livsförändrande beslutet att följa min dröm om att bli programmerare. Mitt slutgiltiga mål " + 
+        "är att bli spelutvecklare. Jag har ett särskilt intresse för C# och tycker om att arbeta med teknologier som SQL, PHP och JavaScript. " + 
+        "Jag trivs med utmaningar och att lösa komplexa problem, vilket gör detta område till en perfekt match för mig. Min resa speglar mitt " + 
+        "engagemang för utveckling och lärande, och jag ser fram emot att ta med min entusiasm och beslutsamhet i varje projekt jag tar mig an.";
+
+    let index = 0;
+    
+    function typeWriter() {
+      if (index < text.length) {
+        textElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 30); // Justera 100ms för att ändra skrivhastigheten
+      }
+    }
+    
+    // Starta skrivprocessen
+    typeWriter();
+    </script>
 
 </body>
 </html>
